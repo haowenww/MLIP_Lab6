@@ -22,7 +22,12 @@ pipeline {
                 # sudo /PATH/TO/CONDA run -n <Envinronment Name> <Command you want to run>
 
                 # Activate the virtual environment
+                python3 -m venv mlip
                 source mlip/bin/activate
+                pip install pytest
+                pip install numpy
+                pip install pandas
+                pip install scikit-learn
 
                 # Run pytest
                 pytest
